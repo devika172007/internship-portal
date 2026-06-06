@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Internship Portal</title>
+
+    <style>
+        body{
+            font-family: Arial;
+            margin:0;
+        }
+
+        .banner{
+            background:orange;
+            padding:10px;
+            text-align:center;
+            position:sticky;
+            top:0;
+        }
+
+        button{
+            margin:10px;
+            padding:10px;
+            cursor:pointer;
+        }
+
+        #menu{
+            background:lightgray;
+            padding:10px;
+        }
+
+        #menu ul{
+            list-style:none;
+            padding:0;
+        }
+
+        #menu li{
+            padding:5px;
+        }
+
+        .hero{
+            text-align:center;
+            padding:50px;
+        }
+
+        .card{
+            border:1px solid black;
+            padding:20px;
+            margin:10px;
+            display:inline-block;
+        }
+
+        .stats{
+            background:lightblue;
+            padding:20px;
+            display:flex;
+            justify-content:space-around;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="banner">
+        Internship Applications Open - Apply Now!
+    </div>
+
+    <button onclick="toggleMenu()">
+        ☰ Menu
+    </button>
+
+    <div id="menu" style="display:none;">
+        <ul>
+            <li>Home</li>
+            <li>Universities</li>
+            <li>Internships</li>
+            <li>Contact</li>
+        </ul>
+    </div>
+
+    <section class="hero">
+        <h1>Find Your Dream Internship</h1>
+        <p>Connect with top universities and companies.</p>
+        <button onclick="applyNow()">Apply Now</button>
+    </section>
+
+    <section>
+        <h2>Our Mission</h2>
+        <p>Helping students gain skills and internships.</p>
+    </section>
+
+    <section>
+        <h2>Universities</h2>
+        <div class="card">Presidency University</div>
+        <div class="card">VTU</div>
+        <div class="card">PES University</div>
+        <div class="card">MS Ramaiah</div>
+    </section>
+
+    <section class="stats">
+        <div>5000+ Students</div>
+        <div>100+ Universities</div>
+        <div>300+ Companies</div>
+    </section>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("menu");
+
+            if(menu.style.display === "none") {
+                menu.style.display = "block";
+            } else {
+                menu.style.display = "none";
+            }
+        }
+
+        function applyNow() {
+            alert("Application Form Coming Soon!");
+        }
+    </script>
+
+</body>
+</html>
