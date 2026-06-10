@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Basic Password Generator</title>
+    <style>
+        body { text-align: center; font-family: Arial; margin-top: 100px; }
+        input { width: 250px; height: 30px; font-size: 18px; text-align: center; margin-bottom: 10px; }
+        button { padding: 10px; font-size: 16px; cursor: pointer; margin: 5px; }
+    </style>
+</head>
+<body>
+    <h2>Password Generator</h2>
+    <input type="text" id="displayBox" readonly placeholder="Click Generate...">
+    <br>
+    <label for="length">Enter Password Length:</label>
+    <input type="number" id="length" value="10" min="4" max="32">
+    <br>
+    <button onclick="buildPassword()">Generate</button>
+
+    <script>
+        function buildPassword() {
+            const allowedCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*";
+            const length = document.getElementById("length").value;
+            let finalPassword = "";
+            for (let i = 0; i < length; i++) {
+                const randomPosition = Math.floor(Math.random() * allowedCharacters.length);
+                finalPassword += allowedCharacters[randomPosition];
+            }
+            document.getElementById("displayBox").value = finalPassword;
+        }
+    </script>
+</body>
+</html>
+
+
